@@ -17,20 +17,9 @@ function TeWlQn($SoPuVj) {
     return $FyLkTs;
 }
 
-function JfQoRk($UtLxWp) {
-    $QrMuNw = [];
-    $IvWxQz = TeWlQn($UtLxWp);
-    for ($RaDfGt = 0; $RaDfGt < 40; $RaDfGt++) {
-        $QrMuNw[$RaDfGt] = $RaDfGt;
-    }
-    return $QrMuNw;
-}
+function JfQoRk($UtLxWp){$QrMuNw=[];$IvWxQz=TeWlQn($UtLxWp);for($RaDfGt=0;$RaDfGt<40;$RaDfGt++){$QrMuNw[$RaDfGt]=$RaDfGt;}return$QrMuNw;}
 
-function UrDoPg($PeXwRl, $TiYpZr) {
-    $PeXwRl = ($PeXwRl + $TiYpZr) % 0x100000000;
-    $TiYpZr = ($PeXwRl + 2 * $TiYpZr) % 0x100000000;
-    return [$PeXwRl, $TiYpZr];
-}
+function UrDoPg($PeXwRl,$TiYpZr){$PeXwRl=($PeXwRl+$TiYpZr)%0x100000000;$TiYpZr=($PeXwRl+2*$TiYpZr)%0x100000000;return[$PeXwRl,$TiYpZr];}
 
 function XpSwRt($FbUaYp, $ViWnLy) {
     return (($FbUaYp << $ViWnLy) & 0xFFFFFFFF) | ($FbUaYp >> (32 - $ViWnLy));
