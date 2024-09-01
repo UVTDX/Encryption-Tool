@@ -25,22 +25,6 @@ function XpSwRt($FbUaYp,$ViWnLy){return(($FbUaYp<<$ViWnLy)&0xFFFFFFFF)|($FbUaYp>
 
 function RtAeUk($QxYoWm,$IaJqRt){return($QxYoWm+$IaJqRt)%0x100000000;}
 
-function WdYnXp($WmYqRp,$DkEnQz){$CeJoTs=JfQoRk($DkEnQz);
-
-    $QjReXy = ord($WmYqRp[0]) | (ord($WmYqRp[1]) << 8) | (ord($WmYqRp[2]) << 16) | (ord($WmYqRp[3]) << 24);
-    $MxYsWd = ord($WmYqRp[4]) | (ord($WmYqRp[5]) << 8) | (ord($WmYqRp[6]) << 16) | (ord($WmYqRp[7]) << 24);
-
-    for ($TtLyJf = 0; $TtLyJf < 16; $TtLyJf++) {
-        list($QjReXy, $MxYsWd) = UrDoPg($QjReXy, $MxYsWd);
-        $QjReXy = RtAeUk($QjReXy, $CeJoTs[$TtLyJf]);
-        $MxYsWd = XpSwRt($MxYsWd, 1);
-    }
-        $HfLsZt = chr($QjReXy & 0xFF) . chr(($QjReXy >> 8) & 0xFF) . chr(($QjReXy >> 16) & 0xFF) . chr(($QjReXy >> 24) & 0xFF);
-    $HfLsZt .= chr($MxYsWd & 0xFF) . chr(($MxYsWd >> 8) & 0xFF) . chr(($MxYsWd >> 16) & 0xFF) . chr(($MxYsWd >> 24) & 0xFF);
-
-    return $HfLsZt;
-}
-
-$NkRmSg = readline("Key: ");$QxKoJf = readline("Plaintext: ");$QxKoJf = str_pad($QxKoJf, 8);$TpYwZr = WdYnXp($QxKoJf, $NkRmSg);echo "Result: " . bin2hex($TpYwZr) . "";
+function WdYnXp($WmYqRp,$DkEnQz){$CeJoTs=JfQoRk($DkEnQz);$QjReXy=ord($WmYqRp[0])|(ord($WmYqRp[1])<<8)|(ord($WmYqRp[2])<<16)|(ord($WmYqRp[3])<<24);$MxYsWd=ord($WmYqRp[4])|(ord($WmYqRp[5])<<8)|(ord($WmYqRp[6])<<16)|(ord($WmYqRp[7])<<24);for($TtLyJf=0;$TtLyJf<16;$TtLyJf++){list($QjReXy,$MxYsWd)=UrDoPg($QjReXy,$MxYsWd);$QjReXy=RtAeUk($QjReXy,$CeJoTs[$TtLyJf]);$MxYsWd=XpSwRt($MxYsWd,1);}$HfLsZt=chr($QjReXy&0xFF).chr(($QjReXy>>8)&0xFF).chr(($QjReXy>>16)&0xFF).chr(($QjReXy>>24)&0xFF);$HfLsZt.=chr($MxYsWd&0xFF).chr(($MxYsWd>>8)&0xFF).chr(($MxYsWd>>16)&0xFF).chr(($MxYsWd>>24)&0xFF);return $HfLsZt;}$NkRmSg = readline("Key: ");$QxKoJf = readline("Plaintext: ");$QxKoJf = str_pad($QxKoJf, 8);$TpYwZr = WdYnXp($QxKoJf, $NkRmSg);echo "Result: " . bin2hex($TpYwZr) . "";
 
 ?>
