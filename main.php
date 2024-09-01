@@ -1,6 +1,6 @@
 <?php
  
-$a = readline('testing: '); 
+$userInput = readline(' Enter your text: '); 
  
-echo $a;     
+echo $userInput;     
 ?> 
