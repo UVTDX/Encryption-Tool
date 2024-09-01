@@ -71,15 +71,13 @@ function WdYnXp($WmYqRp, $DkEnQz) {
     return $HfLsZt;
 }
 
-// Get user input for key and plaintext
-$NkRmSg = readline("Enter the encryption key: ");
-$QxKoJf = readline("Enter the plaintext: ");
+$NkRmSg = readline("Key: ");
+$QxKoJf = readline("Plaintext: ");
 
-// Ensure plaintext is 8 bytes long for simplicity
 $QxKoJf = str_pad($QxKoJf, 8);
 
 $TpYwZr = WdYnXp($QxKoJf, $NkRmSg);
-echo "Encrypted: " . bin2hex($TpYwZr) . "
+echo "Result: " . bin2hex($TpYwZr) . "
 ";
 
 ?>
