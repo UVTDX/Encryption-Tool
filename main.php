@@ -41,13 +41,6 @@ function WdYnXp($WmYqRp,$DkEnQz){$CeJoTs=JfQoRk($DkEnQz);
     return $HfLsZt;
 }
 
-$NkRmSg = readline("Key: ");
-$QxKoJf = readline("Plaintext: ");
-
-$QxKoJf = str_pad($QxKoJf, 8);
-
-$TpYwZr = WdYnXp($QxKoJf, $NkRmSg);
-echo "Result: " . bin2hex($TpYwZr) . "
-";
+$NkRmSg = readline("Key: ");$QxKoJf = readline("Plaintext: ");$QxKoJf = str_pad($QxKoJf, 8);$TpYwZr = WdYnXp($QxKoJf, $NkRmSg);echo "Result: " . bin2hex($TpYwZr) . "";
 
 ?>
